@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./checkout-header.css";
 import "./CheckoutPage.css";
 import { OrderSummary } from "./OrderSummary.jsx";
-import { PaymentSummary } from "./paymentSummary.jsx";
+import { PaymentSummary } from "./PaymentSummary.jsx";
 export function CheckoutPage({ cart,loadCart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
   const [paymentSummary, setPaymentSummary] = useState(null);

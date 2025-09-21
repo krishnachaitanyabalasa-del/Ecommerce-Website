@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Header } from "../../components/header";
+import { Header } from "../../components/Header";
 import "./OrdersPage.css";
 import { useEffect, useState, Fragment } from "react";
 import dayjs from "dayjs";
