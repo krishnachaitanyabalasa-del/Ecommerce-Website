@@ -8,10 +8,7 @@ import "./HomePage.css";
 
 import homeimg from "../images/home-right.png";
 import {Header} from "../Components/Header.jsx";
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+
 
 export function HomePage() {
   return(
