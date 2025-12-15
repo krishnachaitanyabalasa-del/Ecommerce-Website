@@ -5,25 +5,57 @@ body{
 .hero-container {
   display: flex;
   height: 80vh;        /* full screen height */
-  width: 94vw;
+  width: 100%;
 }
 
-.Hero-left {
-  display:flex;             /* 50% */
+.Hero-left { 
+  display: flex;    
+  flex-direction: column;
   background-color: #f5f5f5;
   width:50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
+.hero-button {
+  background-color: #ff4d30;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 999px;   /* pill button */
+  cursor: pointer;
+  margin-top:20px;
+}
 .Hero-right {
-  display:flex;             /* 50% */
-  background-color: #a5a5a5;
-  width:50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* same as left or transparent */
 }
 
+.hero-image {
+  width: 100%;
+  height: 100%;
+  max-width: 520px;   /* 🔑 prevents over-stretching */
+  object-fit: contain;
+}
+
+.how-it-works{
+  margin-top:16px;
+  background-color: #f8f9fb;   /* light neutral */
+  border-radius: 16px;
+  padding: 50px 40px;
+}
 .services {
   display: flex;
   flex-direction: column;
   align-items: center;   /* centers everything horizontally */
+  background-color: #f8f9fb;   /* light neutral */
+  border-radius: 16px;
+  margin-top:16px;
+  padding: 5px 40px;
 }
 .services ul {
   list-style-position: outside;
@@ -35,8 +67,10 @@ body{
 }
 
 .reasons{
-  display: grid;
+  display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap:16px;
+  row-gap:40px;
 }
 .reason{
   background-color:lightblue;
@@ -56,9 +90,25 @@ body{
   width:200px;
   height:50px;
 }
+@media(max-width:750px){
+  .reasons{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(min-width:1000px){
+  .reasons{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media(min-width:751px) and (max-width:999px)
+{
+   .reasons{
+    grid-template-columns: 1fr 1fr 1fr;
+  } 
+}
 
 .call-to-action {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
   background-image: url("../images/call.jpg");
@@ -100,11 +150,48 @@ body{
   background-color: #e63e28;
 }
 
-.footer{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: #1e4dab;
-  width:100%;
-  
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* ALWAYS 3 */
+  width: 100%;
+  background-color: #f8f9fb;   /* light neutral */
+  border-radius: 16px;
+  padding: 50px 40px;
+  gap: 16px;
 }
+
+
+
+
+.logo-info-grid{
+  display: grid;
+  grid-template-columns: 110px 110px;
+}
+.footer-logo-img{
+  width: 100px;
+  max-width: 100%;
+  border-radius: 80px;
+  height: auto;
+
+}
+
+.footer-info-text{
+  font-size: 18px;
+  word-break: break-word;
+  white-space: normal;
+  font-weight: bold;
+}
+.social-links{
+  display:grid;
+  grid-template-columns: 30px 30px 30px 30px;
+  column-gap:10px;
+}
+.social-img{
+  margin-left:8px;
+  width:30px;
+  height:30px;
+  border-radius: 15px;
+}
+
+
 
